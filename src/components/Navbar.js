@@ -5,7 +5,6 @@ function Navbar() {
   return (
     <div className="Navbar">
         <div className="NavContent">
-            <h1>Navbar</h1>
             <NavLink
                 className="nav-link"
                 activeClassName="nav-link-active"

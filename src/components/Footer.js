@@ -6,7 +6,7 @@ function Footer() {
     return (
       <div className="Footer">
         <header>
-          <h2>Chaoneng Tan Copyright {date.getFullYear()}</h2>
+          <h2>Copyright {date.getFullYear()}</h2>
         </header>
       </div>
     )

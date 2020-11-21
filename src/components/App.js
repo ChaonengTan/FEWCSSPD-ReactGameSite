@@ -2,15 +2,17 @@ import './App.css';
 import { HashRouter as Router, Route } from 'react-router-dom'
 import Navbar from "./Navbar"
 import Footer from "./Footer"
+import Index from "./Index"
+import Breakout from "./BreakoutGame"
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Navbar />
-        {/* <Route exact path="/" component={Index}/>
+        <Route exact path="/" component={Index}/>
         <Route path="/Breakout" component={Breakout} />
-        <Route path="/FruitCatch" component={FruitCatch} /> */}
+        {/* <Route path="/FruitCatch" component={FruitCatch} /> */}
         <Footer />
       </div>
     </Router>

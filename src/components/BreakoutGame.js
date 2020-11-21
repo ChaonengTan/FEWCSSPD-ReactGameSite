@@ -1,17 +1,24 @@
-import React from 'react'
+import React, {Component} from "react"
+import "./Breakout/breakout.css"
+import Ball from './js/ball';
+import Brick from './js/bricks';
+import Paddle from './js/paddle';
 
-function BreakoutGame() {
-  return (
-    <div>
-      <h1>About SFPOPOS</h1>
-      <p>POPOS are publicly accessible spaces in
-        forms of plazas, terraces, atriums, small
-        parks, and even snippets which are provided
-        and maintained by private developers. In San
-        Francisco, POPOS mostly appear in the Downtown
-        office district area.</p>
-    </div>
-  )
+class BreakoutGame extends Component{
+    constructor(props){
+        super(props)
+        this.canvas = React.createRef();
+    }
+    componentDidMount(){
+
+    }
+    render(){
+        return (
+            <div>
+                 <canvas ref={this.canvas} id="myCanvas" width="480" height="320"></canvas>
+            </div>
+         );
+    }
 }
 
 export default BreakoutGame
