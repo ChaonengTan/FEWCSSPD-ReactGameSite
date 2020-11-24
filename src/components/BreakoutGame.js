@@ -1,6 +1,5 @@
 import React, { Component } from "react"
-import "./Breakout/breakout.css"
-// import canvas from "./Breakout/index"
+import "./Breakout.css"
 import game from "./Breakout/index"
 
 class BreakoutGame extends Component{
