@@ -1,8 +1,7 @@
-import React, {Component} from "react"
+import React, { Component } from "react"
 import "./Breakout/breakout.css"
-import Ball from './js/ball';
-import Brick from './js/bricks';
-import Paddle from './js/paddle';
+// import canvas from "./Breakout/index"
+import game from "./Breakout/index"
 
 class BreakoutGame extends Component{
     constructor(props){
@@ -10,7 +9,10 @@ class BreakoutGame extends Component{
         this.canvas = React.createRef();
     }
     componentDidMount(){
-
+        // Canvas
+        this.ctx = this.canvas.current.getContext('2d');
+        // Create Game
+        this.game = new game("myCanvas")
     }
     render(){
         return (
