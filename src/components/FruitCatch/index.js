@@ -9,7 +9,6 @@ class game{
         // solids
         this.score = 0
         this.misses = -1
-        this.speed = 50
         this.color = 'red'
         // dynamics
         this.fruits = [];
@@ -57,13 +56,13 @@ class game{
         }
     }
     variableFruits() {
-        if (this.score>50) {
-            this.fruitLimit(1+Math.round(this.score/50))
+        if (this.score>20) {
+            this.fruitLimit(1+Math.floor(this.score/20))
         } else {
             this.fruitLimit(1)
         }
     }
-    // CREATE DRAW ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    // CREATE and DRAW ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     createGradiant() {
         // skyGrad
         const grd = this.ctx.createLinearGradient(0, 0, 0, 320);
@@ -73,11 +72,17 @@ class game{
         this.ctx.fillStyle = grd;
         this.ctx.fillRect(0, 0, 480, 320);
     }
+    drawScore() {
+        this.ctx.font = '16px Arial';
+        this.ctx.fillStyle = this.infoColor;
+        this.ctx.fillText(`Score: ${this.score}`, 8, 20);
+    }
     drawElements() {
         for (let c = 0; c < this.fruits.length; c += 1){
             this.fruits[c].render(this.ctx);
         }
         this.paddle.render(this.ctx)
+        this.drawScore()
     }
     moveElements() {
         // moves all fruit
