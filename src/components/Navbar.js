@@ -1,3 +1,4 @@
+import githubLogo from './images/githubIcon.jpeg'
 import "./Navbar.css"
 import { NavLink } from 'react-router-dom'
 
@@ -15,9 +16,14 @@ function Navbar() {
                 activeClassName="nav-link-active"
                 to="/Breakout">Breakout
             </NavLink>
+            <NavLink
+                className="nav-link"
+                activeClassName="nav-link-active"
+                to="/FruitCatch">FruitCatch
+            </NavLink>
         </div>
         <div>
-            <p>Link to github</p>
+            <a href="https://github.com/ChaonengTan"><img src={githubLogo} alt='' height="40" width="40"/></a>
         </div>
     </div>
   )
