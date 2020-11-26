@@ -1,3 +1,7 @@
+Author note: Site hosted at: https://chaonengtan.github.io/ReactGameSite/#/
+
+VVV Down below is reactApp init (Read to find more about react kekW) VVV
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
