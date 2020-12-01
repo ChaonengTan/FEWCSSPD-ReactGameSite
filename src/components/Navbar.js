@@ -22,11 +22,21 @@ function Navbar() {
                 to="/FruitCatch">FruitCatch
             </NavLink>
         </div>
-        <div>
+        <div className="NavRight">
+            DarkMode: 
+            <div>
+                <label className="switch">
+                    <input type="checkbox" onClick={(e) => toggleDarkMode()}/>
+                    <span className="slider round"></span>
+                </label>
+            </div>
             <a href="https://github.com/ChaonengTan"><img src={githubLogo} alt='' height="40" width="40"/></a>
         </div>
     </div>
   )
 }
-
+function toggleDarkMode() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+}
 export default Navbar

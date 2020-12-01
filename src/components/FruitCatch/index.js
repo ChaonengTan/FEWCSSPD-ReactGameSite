@@ -8,8 +8,9 @@ class game{
         this.ctx = this.canvas.getContext('2d');
         // solids
         this.score = 0
-        this.misses = -1
+        this.lives = 3;
         this.color = 'red'
+        this.spawnInterval = 10;
         // dynamics
         this.fruits = [];
         this.paddle = new Paddle((this.canvas.width - 75) / 2, 75, 10, this.color, 7, this.canvas);
@@ -29,12 +30,12 @@ class game{
             if (this.fruits[c].y + this.fruits[c].dy > this.canvas.height - this.fruits[c].radius) {
                 // check if it collides with paddle
                 if (this.fruits[c].x > this.paddle.x && this.fruits[c].x < this.paddle.x + this.paddle.width) {
-                    this.score += 1;
                     this.fruits.splice(c, 1)
+                    this.score += 1;
                 } else { /* if not: add a miss */
-                    this.misses += 1;
-                    // remove fruit
-                    if (this.misses>this.score) {
+                    this.fruits.splice(c, 1)
+                    this.lives -= 1;
+                    if (this.lives<1) {
                         alert('GAME OVER');
                         document.location.reload();
                     }
@@ -47,19 +48,12 @@ class game{
         max = Math.floor(max);
         return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
     }
-    createFruit() {
-        this.fruits.push(new Fruit(this.getRandomInt(0, this.canvas.width)))
+    createFruit(speed=4) {
+        this.fruits.push(new Fruit(this.getRandomInt(0, this.canvas.width), speed))
     }
     fruitLimit(limit) {
         if (this.fruits.length<limit){
-            this.createFruit()
-        }
-    }
-    variableFruits() {
-        if (this.score>20) {
-            this.fruitLimit(1+Math.floor(this.score/20))
-        } else {
-            this.fruitLimit(1)
+            this.createFruit(4+Math.floor(this.score/this.spawnInterval))
         }
     }
     // CREATE and DRAW ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -77,12 +71,18 @@ class game{
         this.ctx.fillStyle = this.infoColor;
         this.ctx.fillText(`Score: ${this.score}`, 8, 20);
     }
+    drawLives() {
+        this.ctx.font = '16px Arial';
+        this.ctx.fillStyle = this.infoColor;
+        this.ctx.fillText(`Lives: ${this.lives}`, this.canvas.width - 65, 20);
+    }
     drawElements() {
         for (let c = 0; c < this.fruits.length; c += 1){
             this.fruits[c].render(this.ctx);
         }
         this.paddle.render(this.ctx)
         this.drawScore()
+        this.drawLives()
     }
     moveElements() {
         // moves all fruit
@@ -118,7 +118,7 @@ class game{
         this.createGradiant();
         this.drawElements();
         this.collisionDetection();
-        this.variableFruits();
+        this.fruitLimit(1);
         this.moveElements();
         requestAnimationFrame(this.draw)
       }
