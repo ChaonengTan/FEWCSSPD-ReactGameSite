@@ -1,10 +1,5 @@
 .Footer {
-    box-sizing: border-box;
     width: 100%;
-    display: flex;
     justify-content: center;
-    margin-top: 2em;
     padding: 1em;
-    background-color: gray;
-    color: #fff;
 }

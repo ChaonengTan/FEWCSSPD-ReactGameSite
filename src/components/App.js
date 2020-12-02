@@ -10,11 +10,15 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar />
-        <Route exact path="/" component={Index}/>
-        <Route path="/Breakout" component={Breakout} />
-        <Route path="/FruitCatch" component={FruitCatchGame} />
-        <Footer />
+        <div className="OpacityOverlay">
+          <Navbar />
+          <div className="Route">
+            <Route exact path="/" component={Index}/>
+            <Route path="/Breakout" component={Breakout} />
+            <Route path="/FruitCatch" component={FruitCatchGame} />
+          </div>
+          <Footer />
+        </div>
       </div>
     </Router>
   );

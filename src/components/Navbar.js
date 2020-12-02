@@ -1,4 +1,4 @@
-import githubLogo from './images/githubIcon.jpeg'
+import githubLogo from './images/githubIcon.png'
 import "./Navbar.css"
 import { NavLink } from 'react-router-dom'
 
