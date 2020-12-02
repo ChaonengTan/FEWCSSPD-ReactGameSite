@@ -1,22 +1,24 @@
 {
   "files": {
-    "main.css": "/ReactGameSite/static/css/main.3e54759a.chunk.css",
-    "main.js": "/ReactGameSite/static/js/main.4db1a373.chunk.js",
-    "main.js.map": "/ReactGameSite/static/js/main.4db1a373.chunk.js.map",
-    "runtime-main.js": "/ReactGameSite/static/js/runtime-main.d87fdd8a.js",
-    "runtime-main.js.map": "/ReactGameSite/static/js/runtime-main.d87fdd8a.js.map",
-    "static/js/2.72c26698.chunk.js": "/ReactGameSite/static/js/2.72c26698.chunk.js",
-    "static/js/2.72c26698.chunk.js.map": "/ReactGameSite/static/js/2.72c26698.chunk.js.map",
-    "static/js/3.6236cd3f.chunk.js": "/ReactGameSite/static/js/3.6236cd3f.chunk.js",
-    "static/js/3.6236cd3f.chunk.js.map": "/ReactGameSite/static/js/3.6236cd3f.chunk.js.map",
+    "main.css": "/ReactGameSite/static/css/main.15dee580.chunk.css",
+    "main.js": "/ReactGameSite/static/js/main.8deb82f0.chunk.js",
+    "main.js.map": "/ReactGameSite/static/js/main.8deb82f0.chunk.js.map",
+    "runtime-main.js": "/ReactGameSite/static/js/runtime-main.19f3ea7a.js",
+    "runtime-main.js.map": "/ReactGameSite/static/js/runtime-main.19f3ea7a.js.map",
+    "static/js/2.6d733505.chunk.js": "/ReactGameSite/static/js/2.6d733505.chunk.js",
+    "static/js/2.6d733505.chunk.js.map": "/ReactGameSite/static/js/2.6d733505.chunk.js.map",
+    "static/js/3.5429960b.chunk.js": "/ReactGameSite/static/js/3.5429960b.chunk.js",
+    "static/js/3.5429960b.chunk.js.map": "/ReactGameSite/static/js/3.5429960b.chunk.js.map",
     "index.html": "/ReactGameSite/index.html",
-    "static/css/main.3e54759a.chunk.css.map": "/ReactGameSite/static/css/main.3e54759a.chunk.css.map",
-    "static/js/2.72c26698.chunk.js.LICENSE.txt": "/ReactGameSite/static/js/2.72c26698.chunk.js.LICENSE.txt"
+    "static/css/main.15dee580.chunk.css.map": "/ReactGameSite/static/css/main.15dee580.chunk.css.map",
+    "static/js/2.6d733505.chunk.js.LICENSE.txt": "/ReactGameSite/static/js/2.6d733505.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/ReactGameSite/static/media/ReactGameSiteHomeBG.00099f05.gif",
+    "static/media/githubIcon.3d3ed4b3.png": "/ReactGameSite/static/media/githubIcon.3d3ed4b3.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.d87fdd8a.js",
-    "static/js/2.72c26698.chunk.js",
-    "static/css/main.3e54759a.chunk.css",
-    "static/js/main.4db1a373.chunk.js"
+    "static/js/runtime-main.19f3ea7a.js",
+    "static/js/2.6d733505.chunk.js",
+    "static/css/main.15dee580.chunk.css",
+    "static/js/main.8deb82f0.chunk.js"
   ]
 }
