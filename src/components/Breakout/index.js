@@ -21,6 +21,7 @@ class game{
     this.infoColor = 'red';
     this.ball = new Ball(this.canvas.width / 2, this.canvas.height - 30, 10, 'red');
     this.paddle = new Paddle((this.canvas.width - 75) / 2, 75, 10, 'red', 7, this.canvas);
+    this.isRunning = true
     // Initialize Bricks
     this.createBricks();
     // Event Handlers
@@ -107,6 +108,12 @@ class game{
     this.ball.move();
     this.paddle.move();
   }
+  stop(){
+    this.isRunning = false
+    document.removeEventListener('mousemove', this.mouseMoveHandler, false);
+    document.removeEventListener('keydown', this.keyDownHandler, false);
+    document.removeEventListener('keyup', this.keyUpHandler, false);
+  }
   // assisters
   wallsCollison() {
     // walls, misses, subtracts lives
@@ -174,12 +181,18 @@ class game{
 
   draw() {
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-    this.drawBG();
+    // this.drawBG();
     this.drawElements();
     this.collisionDetection();
     this.wallsCollison();
     this.moveElements();
-    requestAnimationFrame(this.draw)
+    console.log("gameIsRunning")
+    if (this.isRunning){
+      requestAnimationFrame(this.draw)
+      console.log("RequestedAnimationFrame")
+    }
+    console.log("gameStillRunning")
+    // requestAnimationFrame(this.draw)
   }
 }
 

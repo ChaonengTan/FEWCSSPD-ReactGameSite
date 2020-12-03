@@ -13,6 +13,9 @@ class FruitCatchGame extends Component{
         // Create Game
         this.game = new game("fruitCatchCanvas")
     }
+    componentWillUnmount(){
+        this.game.stop()
+    }
     render(){
         return (
             <div>

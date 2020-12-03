@@ -19,6 +19,7 @@ class game{
         document.addEventListener('keydown', this.keyDownHandler.bind(this), false);
         document.addEventListener('keyup', this.keyUpHandler.bind(this), false);
         // draw
+        this.isRunning = true
         this.draw=this.draw.bind(this)
         this.draw()
     }
@@ -42,6 +43,12 @@ class game{
                 }
             }
         }
+    }
+    stop(){
+        this.isRunning = false
+        document.removeEventListener('mousemove', this.mouseMoveHandler, false);
+        document.removeEventListener('keydown', this.keyDownHandler, false);
+        document.removeEventListener('keyup', this.keyUpHandler, false);
     }
     getRandomInt(min, max) {
         min = Math.ceil(min);
@@ -120,7 +127,9 @@ class game{
         this.collisionDetection();
         this.fruitLimit(1);
         this.moveElements();
-        requestAnimationFrame(this.draw)
+        if (this.isRunning){
+            requestAnimationFrame(this.draw)
+        }
       }
 }
 

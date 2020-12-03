@@ -13,6 +13,9 @@ class BreakoutGame extends Component{
         // Create Game
         this.game = new game("myCanvas")
     }
+    componentWillUnmount(){
+        this.game.stop()
+    }
     render(){
         return (
             <div>
